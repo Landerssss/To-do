@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.view {
+    display: none;
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.view.active {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+#todo-form, #memo-input-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#todo-input, #memo-text {
+    flex-grow: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    height: 40px; /* Ensure the memo input height matches the button */
+    resize: none;
+}
+
+.icon-button {
+    padding: 10px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-size: 20px;
+}
+
+.green-circle {
+    border-radius: 50%;
+    background-color: #90ee90; /* light green */
+    color: #87ceeb; /* sky blue */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#todo-list, #memo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#todo-list li, #memo-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: transparent;
+}
+
+#navbar button {
+    border: none;
+    background: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#navbar button:focus {
+    outline: none;
+}
+
+textarea {
+    width: calc(100% - 40px); /* Adjust for padding and border */
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.task-buttons button {
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.task-buttons .complete-button {
+    color: #87ceeb; /* sky blue */
+}
+
+.task-buttons .delete-button {
+    color: red;
+}

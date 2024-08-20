@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List + Memo App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="todo" class="view active">
+            <h1>To-do List</h1>
+            <form id="todo-form" onsubmit="event.preventDefault(); addTask();">
+                <input type="text" id="todo-input" placeholder="Enter a new task">
+                <button type="submit" class="icon-button green-circle">&#x2714;</button>
+            </form>
+            <ul id="todo-list"></ul>
+        </div>
+        <div id="memo" class="view">
+            <h1>Memo</h1>
+            <div id="memo-input-container">
+                <textarea id="memo-text" placeholder="Write your memo here..."></textarea>
+                <button class="icon-button green-circle" id="memo-save-button">&#x2714;</button>
+            </div>
+            <ul id="memo-list"></ul>
+        </div>
+        <div id="navbar">
+            <button id="switch-button" onclick="switchView()">Memo</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
